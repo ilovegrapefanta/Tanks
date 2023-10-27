@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gabarito', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bimbimbambam.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: white;
+    color: black;
+}
+
+.highlight {
+    background-color: black;
+    border-radius: 20px;
+    font-size: 140%;
+}
+
+.article img {
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.article {
+    color: white;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 150px;
+    padding-top: 60px;
+}
+
+.article h1 {
+    font-size: 250%;
+    padding-bottom: 20px;
+}
+
+.article p {
+    font-size: 150%;
+    padding-bottom: 15px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.article video {
+    border-radius: 20px;
+}
+
+/*slideshow*/
+.image-banner {
+    position: relative;
+    top: 0px;
+    left: 200px;
+    z-index: 10;
+    margin-bottom: 145px;
+    margin-top: 30px;
+}
+
+.image-banner img {
+    display: block;
+}
+
+.cycle-slideshow {
+    margin-bottom: 30px;
+    width: 100%;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.slide {
+    width: 70%;
+    position: relative;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.slide-text {
+    position: absolute;
+    bottom: 10;
+    background-color: rgb(98, 77, 77, 0.5);
+    color: black;
+    width: 100%;
+    padding: 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.slide-text h3 {
+    margin: 0;
+    color: red;
+}
+.slide-text p {
+    color: red;
+}
+/*slideshow*/
+
+/*previous and next*/
+.cycle-prev, .cycle-next {
+    position: absolute;
+    width: 20%;
+    top: 30%;
+    background-color: rgba(0,0,0,0.4);
+    color: #FFF;
+    padding: 1px 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 130%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity .5s;
+    border-radius: 20px;
+}
+.cycle-next {
+    right: 0px;
+}
+
+.cycle-slideshow:hover .cycle-prev,
+.cycle-slideshow:hover .cycle-next {
+    opacity: 1;
+}
+    /*previous and next*/
+
+table {
+    width:100%;
+    border-radius: 20px;
+}
+
+table th {
+    text-align: left;
+    background-color: transparent;
+    color: white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+    border-radius: 20px;
+    
+}
+
+table th, table td{
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    padding: 10px;
+}
+
+table tbody tr:nth-child(even) td {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+
+table th:nth-child(2), table th:nth-child(3),
+table td:nth-child(2), table td:nth-child(3) {
+    text-align: center;
+}
+
+.col-fave {
+    width: 60%;
+}
+
+.col-P, .col-Q {
+    width: 20%;
+}
+/*end table styles*/
+.video {
+    align-items: center;
+    margin-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.audio {
+    padding-bottom: 20px;
+    align-items: center;
+}
